@@ -5,6 +5,7 @@ dotenv.config();
 import {
   NibiruTxClient,
   Chain,
+  Mainnet,
   Testnet,
   newSignerFromMnemonic,
 } from "@nibiruchain/nibijs";
@@ -12,9 +13,13 @@ import {
 const contract_wasm = fs.readFileSync("../contract.wasm");
 
 const func = async () => {
+  // Uncomment for mainnet
+  // const chain: Chain = Mainnet();
+  // const reclaim_address = "nibi1d7ffxpewty3zd0lq39l9rxc2wtmgv8j3gsg3qf5yglzewqp84mkqlttmme"
+
   const chain: Chain = Testnet();
   const reclaim_address = "nibi1l0yhggdxmvkcjd9a304gkel770rkyl2vy272q58seyp5sys7486spversq"
-    
+  
   let signer = await newSignerFromMnemonic(process.env.MNEMONIC || ""); 
   let accs = await signer.getAccounts();
   let addr = accs[0].address;

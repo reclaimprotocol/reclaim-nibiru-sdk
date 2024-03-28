@@ -52,7 +52,7 @@ const func = () => __awaiter(void 0, void 0, void 0, function* () {
     let insResponse = yield txClient.wasmClient.instantiate(addr, codeId, { contract: reclaim_address }, "local0.1.0", "auto");
     let contractAddress = insResponse.contractAddress;
     console.log("Contract Address: ", contractAddress);
-    console.log("Code Id: ", codeId);
+    // console.log("Code Id: ", codeId);
     const owner = "0xe4c20c9f558160ec08106de300326f7e9c73fb7f";
     const claimInfo = {
         provider: "http",
