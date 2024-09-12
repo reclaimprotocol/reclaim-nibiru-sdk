@@ -1,4 +1,8 @@
-# Reclaim - Nibiru SDK
+<div>
+    <div>
+        <img src="https://raw.githubusercontent.com/reclaimprotocol/.github/main/assets/banners/Nibiru-SDK.png"  />
+    </div>
+</div>
 
 
 ## Deployments
